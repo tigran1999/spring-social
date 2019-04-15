@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="ISO-8859-1"/>
+
+    <title>Friends</title>
+</head>
+<body>
+<h1>
+    Hello , <span th:text="${profileName}"></span>!
+</h1>
+<h4>Here is your feed:</h4>
+<div th:each="friend:${friends}">
+    <b th:text="${friend.name}"></b> wrote:
+    <span th:text="${friend.bio}"></span>
+    <hr />
+</div>
+</body>
+</html>
